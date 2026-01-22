@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+header{
+    min-height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4F79A7;   /* Muted Sky Blue */
+    color:white
+}
+    
+.logo{
+    flex: 2;
+    margin: 0 5rem;
+    font-size: 1.8rem;
+}
+.theme{
+    flex: 1;
+    color:beige;
+    font-size: 1.7rem;
+    text-align: center;
+    
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+}
+nav a{
+    margin: 1rem;
+    font-size: 1.7rem;
+}
+
+
+.banner {
+  background-image: linear-gradient(
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+    ),
+    url("./images/pexels-nout-gons-80280-378570.jpg");
+
+
+    width: 100%;
+    height: 40vh;
+
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+.banner h2{
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+.banner h4{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+button{
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #4F79A7;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+button:hover {
+  background-color: #2563c7;
+  scale: 1.2;
+}
+
+
+
+
+/* FILTER SECTION */
+.filters {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.filters form {
+  display: flex;
+  gap: 15px;
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.filters input,
+.filters select,
+.filters button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+
+
+/* FEATURED PRODUCTS */
+.featured {
+  padding: 40px 60px;
+  text-align: center;
+}
+
+.featured h2 {
+  margin-bottom: 25px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+}
+
+.product-card p {
+  margin: 6px 0;
+}
+
+.product-card button {
+  margin-top: 10px;
+  background: #2f80ed;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.product-card button:disabled {
+  background: #d1d5db;
+  color: #888;
+  cursor: not-allowed;
+}
+
+/* BADGES */
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  color: white;
+}
+
+.sale {
+  background: #e74c3c;
+}
+
+.best {
+  background: #f39c12;
+}
+
+.out {
+  background: #7f8c8d;
+}
+
+/* TABLE SECTION */
+.catalog {
+  padding: 40px 60px;
+}
+
+.catalog h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+thead {
+  background: #cfe4f8;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f4f8fc;
+}
+
+tbody tr:hover {
+  background-color: #eef4fb;
+}
+
+td button {
+  background: #2f80ed;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+td button:disabled {
+  background: #d1d5db;
+  color: #888;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-size: 14px;
+}
