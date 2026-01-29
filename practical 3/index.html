@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <!-- Form Header -->
+    <div class="form-header">
+        <div class="form-header-content">
+            <h1 class="form-title">Feedback Form</h1>
+            <p class="form-description">Please share your feedback with us. Your responses help us improve our services.</p>
+        </div>
+    </div>
+
+    <form action="#" method="post">
+        <!-- Name Input -->
+        <div class="question-section">
+            <label for="name" class="question-label">Full Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Your answer" maxlength="100" required>
+        </div>
+
+        <!-- Email Input -->
+        <div class="question-section">
+            <label for="email" class="question-label">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="Your answer" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        </div>
+
+        <!-- Password Input -->
+        <div class="question-section">
+            <label for="password" class="question-label">Password <span class="required">*</span></label>
+            <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                placeholder="Your answer" 
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#,#])[A-Za-z\d@$!%*?&#,#]{8,}$"
+                minlength="8" 
+                required
+                title="Password must contain at least 8 characters, including uppercase, lowercase, number and special character">
+            <div class="question-hint">
+                Must include: 8+ characters, uppercase, lowercase, number, special character (@$!%*?&)
+            </div>
+        </div>
+
+        <!-- Date Picker -->
+        <div class="question-section">
+            <label for="date" class="question-label">Date of Visit <span class="required">*</span></label>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+        <!-- Time Picker -->
+        <div class="question-section">
+            <label for="time" class="question-label">Time of Visit <span class="required">*</span></label>
+            <input type="time" id="time" name="time" required>
+        </div>
+
+        <!-- Dropdown List -->
+        <div class="question-section">
+            <label for="service" class="question-label">Service Used <span class="required">*</span></label>
+            <select id="service" name="service" required>
+                <option value="">Choose</option>
+                <option value="consulting">Consulting</option>
+                <option value="support">Support</option>
+                <option value="development">Development</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!-- Checkbox Group -->
+        <div class="question-section">
+            <label class="question-label">Hobbies</label>
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="hobby-reading" name="hobbies" value="reading">
+                    <label for="hobby-reading">Reading</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="hobby-sports" name="hobbies" value="sports">
+                    <label for="hobby-sports">Sports</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="hobby-coding" name="hobbies" value="coding">
+                    <label for="hobby-coding">Coding</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="hobby-music" name="hobbies" value="music">
+                    <label for="hobby-music">Music</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Radio Button Group -->
+        <div class="question-section">
+            <label class="question-label">Would you recommend us? <span class="required">*</span></label>
+            <div class="radio-group">
+                <div class="radio-item">
+                    <input type="radio" id="recommend-yes" name="recommend" value="yes" required>
+                    <label for="recommend-yes">Yes</label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" id="recommend-no" name="recommend" value="no">
+                    <label for="recommend-no">No</label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" id="recommend-maybe" name="recommend" value="maybe">
+                    <label for="recommend-maybe">Maybe</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- File Upload -->
+        <div class="question-section">
+            <label for="upload" class="question-label">Upload Supporting Document</label>
+            <input type="file" id="upload" name="upload" multiple>
+        </div>
+
+        <!-- Text Area -->
+        <div class="question-section">
+            <label for="feedback" class="question-label">Feedback</label>
+            <textarea id="feedback" name="feedback" placeholder="Your answer" maxlength="500"></textarea>
+        </div>
+
+        <!-- Range Input -->
+        <div class="question-section">
+            <label for="rating" class="question-label">Rate Our Services</label>
+            <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="5">
+            <div class="range-labels">
+                <span>1 (Poor)</span>
+                <span>10 (Excellent)</span>
+            </div>
+        </div>
+
+        <!-- Color Picker -->
+        <div class="question-section">
+            <label for="color" class="question-label">Pick Your Favorite Color</label>
+            <input type="color" id="color" name="color" value="#673ab7">
+        </div>
+
+        <!-- Hidden Input -->
+        <input type="hidden" name="form_id" value="feedback-form">
+
+        <!-- Submit Button -->
+        <div class="button-container">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <!-- Footer -->
+    <div class="form-footer">
+        This form was created using custom HTML. Not affiliated with Google Forms.
+    </div>
+</div>
+
+</body>
+</html>
