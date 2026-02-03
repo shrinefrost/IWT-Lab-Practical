@@ -1,0 +1,297 @@
+/* ===================== 
+           STEP 1: RESET 
+           Removes default styling from everything
+        ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===================== 
+           STEP 2: BODY 
+           Sets the base font and background color
+        ===================== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 40px;
+  color: #333333;
+}
+
+/* ===================== 
+           STEP 3: RESUME BOX 
+           The main white box that holds everything
+        ===================== */
+.resume {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px #cccccc;
+}
+
+/* ===================== 
+           STEP 4: HEADER 
+           Logo on the left, name on the right
+           using flexbox
+        ===================== */
+.header {
+  background-color: #1e3a5f;
+  color: white;
+  padding: 30px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* ===================== 
+           STEP 5: LOGO 
+           Put your logo path in src=""
+           below in the HTML section
+        ===================== */
+.logo {
+  width: 100px; /* logo width */
+  height: 100px; /* logo height */
+  object-fit: contain; /* keeps the logo shape, no stretching */
+  filter: brightness(0) invert(1); /* makes dark logo white */
+}
+
+/* ===================== 
+           STEP 6: HEADER TEXT 
+           Name and title next to the logo
+        ===================== */
+.header-text h1 {
+  font-size: 36px;
+  margin-bottom: 6px;
+}
+
+.header-text p {
+  font-size: 15px;
+  color: #ccddee;
+  margin-bottom: 3px;
+}
+
+/* ===================== 
+           STEP 5: CONTACT INFO 
+           Phone, email, links below the name
+        ===================== */
+.contact {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #555555;
+}
+
+.contact a {
+  color: #1e3a5f;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* ===================== 
+           STEP 6: SECTION TITLE 
+           "Education", "Projects" etc headings
+        ===================== */
+.section-title {
+  font-size: 20px;
+  color: #1e3a5f;
+  border-bottom: 2px solid #1e3a5f;
+  padding-bottom: 6px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/* ===================== 
+           STEP 7: EDUCATION CARD 
+           Each education item
+        ===================== */
+.edu-card {
+  background-color: #f7f9fc;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.edu-card h3 {
+  font-size: 17px;
+  color: #4e5154;
+  margin-bottom: 4px;
+}
+
+.edu-card .school-name {
+  font-size: 15px;
+  color: #555555;
+}
+
+.edu-card .details {
+  font-size: 14px;
+  color: #777777;
+  margin-top: 4px;
+}
+
+/* ===================== 
+           STEP 8: EXPERIENCE CARD 
+           Role and description
+        ===================== */
+.exp-card {
+  background-color: #f7f9fc;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.exp-card h3 {
+  font-size: 17px;
+  color: #1e3a5f;
+  margin-bottom: 4px;
+}
+
+.exp-card .company-name {
+  font-size: 15px;
+  color: #555555;
+}
+
+.exp-card ul {
+  margin-top: 8px;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #555555;
+}
+
+.exp-card ul li {
+  margin-bottom: 4px;
+}
+
+/* ===================== 
+           STEP 9: PROJECT CARD 
+           Each project box
+        ===================== */
+.project-card {
+  border: 1px solid #dddddd;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.project-card h3 {
+  font-size: 17px;
+  color: #1e3a5f;
+  margin-bottom: 6px;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+/* ===================== 
+           STEP 10: PROJECT LINKS 
+           GitHub and Live Demo buttons
+        ===================== */
+.project-links a {
+  display: inline-block;
+  background-color: #1e3a5f;
+  color: white;
+  text-decoration: none;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-right: 8px;
+}
+
+.project-links a:hover {
+  background-color: #2a5a8f;
+}
+
+/* ===================== 
+           STEP 11: TECH TAGS 
+           Small colored badges for technologies
+        ===================== */
+.tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #eef2ff;
+  color: #1e3a5f;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/* ===================== 
+           STEP 12: SKILLS GRID 
+           Two column layout for skills
+        ===================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.skill-box {
+  background-color: #f7f9fc;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.skill-box h4 {
+  font-size: 15px;
+  color: #1e3a5f;
+  margin-bottom: 4px;
+}
+
+.skill-box p {
+  font-size: 14px;
+  color: #555555;
+}
+
+/* ===================== 
+           STEP 13: ACHIEVEMENTS 
+           Achievement items
+        ===================== */
+.achievement-item {
+  background-color: #f0f7ff;
+  border-left: 4px solid #1e3a5f;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 0 6px 6px 0;
+}
+
+.achievement-item h4 {
+  font-size: 15px;
+  color: #1e3a5f;
+  margin-bottom: 3px;
+}
+
+.achievement-item p {
+  font-size: 14px;
+  color: #555555;
+}
+
+/* ===================== 
+           STEP 14: DATE LABEL 
+           Small date text on the right side
+        ===================== */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  font-size: 13px;
+  color: #999999;
+}
