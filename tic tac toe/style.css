@@ -1,0 +1,105 @@
+/* ===== General Page Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Courier New', monospace;
+}
+
+/* ===== Container (holds everything) ===== */
+.container {
+    text-align: center;
+}
+
+/* ===== Title ===== */
+.title {
+    font-size: 2.5rem;
+    color: #e94560;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+/* ===== Status Message (whose turn / winner) ===== */
+.status {
+    font-size: 1.2rem;
+    color: #a8b2d8;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+    min-height: 30px;
+}
+
+/* ===== Game Board (3x3 Grid) ===== */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 110px); /* 3 equal columns */
+    grid-template-rows: repeat(3, 110px);    /* 3 equal rows */
+    gap: 8px; /* space between cells */
+    margin: 0 auto 32px;
+    width: fit-content;
+}
+
+/* ===== Individual Cell ===== */
+.cell {
+    background-color: #16213e;
+    border: 2px solid #0f3460;
+    border-radius: 12px;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Hover effect — only when cell is empty */
+.cell:hover {
+    background-color: #0f3460;
+    transform: scale(1.04);
+}
+
+/* X is red, O is blue */
+.cell.x {
+    color: #e94560;
+    cursor: default;
+}
+
+.cell.o {
+    color: #4fc3f7;
+    cursor: default;
+}
+
+/* Highlight winning cells */
+.cell.winner {
+    background-color: #0f3460;
+    border-color: #e94560;
+}
+
+/* ===== Restart Button ===== */
+.restart-btn {
+    background-color: #e94560;
+    color: white;
+    border: none;
+    padding: 12px 36px;
+    font-size: 1rem;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.restart-btn:hover {
+    background-color: #c73652;
+    transform: scale(1.05);
+}
